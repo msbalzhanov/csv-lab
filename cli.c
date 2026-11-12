@@ -136,8 +136,8 @@ int cli(int arg_count, char *num_arg[])
 
         if (fgets(buffer, sizeof(buffer), f) == NULL)
         {
-            delete_end(buffer);
             fprintf(stderr, "Ошибка: Фаил пустой\n");
+            fclose(f);
             return 1;
         }
 
