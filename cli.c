@@ -87,7 +87,7 @@ static int is_double(const char *read)
 {
     char *end;
     errno = 0;
-    long check_double = strtod(read, &end);
+    double check_double = strtod(read, &end);
     if(end != read && *end == '\0' && errno != ERANGE)
         return 1;
     else
